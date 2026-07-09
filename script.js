@@ -139,7 +139,7 @@ async function convertCurrency() {
     resultValue.textContent = `${formatNumber(roundedResult)} ${to}`;
     renderResultDetails(
       `Exact amount: ${amount} ${from} ≈ ${exactResult.toFixed(2)} ${to}`,
-      `Rounded up from live rate ${data.rate}. Date: ${data.date || "latest"}.`
+      `Rounded up from live rate ${data.rate}.`
     );
   } catch (error) {
     showError(error.message || "Something went wrong. Check your internet connection and try again.");
