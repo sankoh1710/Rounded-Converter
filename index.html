@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rounded Currency Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="header">
+      <h1>Rounded Currency Converter</h1>
+      <p>Convert live exchange rates and round the result up to the next whole number.</p>
+    </section>
+
+    <form id="converterForm">
+      <div class="field">
+        <label for="amount">Amount</label>
+        <input id="amount" type="number" min="0" step="0.01" value="1" placeholder="Enter amount" required />
+      </div>
+
+      <div class="currency-row">
+        <div>
+          <label for="fromCurrency">From</label>
+          <select id="fromCurrency"></select>
+        </div>
+
+        <button class="swap-btn" type="button" id="swapBtn" aria-label="Swap currencies">⇄</button>
+
+        <div>
+          <label for="toCurrency">To</label>
+          <select id="toCurrency"></select>
+        </div>
+      </div>
+
+      <button class="convert-btn" type="submit" id="convertBtn">Convert</button>
+    </form>
+
+    <section class="result-card" id="resultCard">
+      <p class="result-label">Rounded result</p>
+      <p class="result-value" id="resultValue">—</p>
+      <p class="result-extra" id="resultExtra">Enter an amount and choose currencies.</p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
